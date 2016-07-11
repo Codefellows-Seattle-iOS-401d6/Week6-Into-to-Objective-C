@@ -14,6 +14,8 @@
 		EE1139751D3439D200EB36C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1139741D3439D200EB36C3 /* Assets.xcassets */; };
 		EE1139781D3439D200EB36C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1139761D3439D200EB36C3 /* LaunchScreen.storyboard */; };
 		EE1139841D343E0800EB36C3 /* NSString+Array.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1139831D343E0800EB36C3 /* NSString+Array.m */; };
+		EE1139881D345BAC00EB36C3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1139871D345BAC00EB36C3 /* Person.m */; };
+		EE11398B1D34663700EB36C3 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = EE11398A1D34663700EB36C3 /* Employee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,11 @@
 		EE1139791D3439D200EB36C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE1139821D343E0800EB36C3 /* NSString+Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Array.h"; sourceTree = "<group>"; };
 		EE1139831D343E0800EB36C3 /* NSString+Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Array.m"; sourceTree = "<group>"; };
+		EE1139851D345A1500EB36C3 /* homeworkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeworkProtocol.h; sourceTree = "<group>"; };
+		EE1139861D345BAC00EB36C3 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		EE1139871D345BAC00EB36C3 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		EE1139891D34663700EB36C3 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		EE11398A1D34663700EB36C3 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +74,11 @@
 				EE11396C1D3439D200EB36C3 /* AppDelegate.m */,
 				EE11396E1D3439D200EB36C3 /* ViewController.h */,
 				EE11396F1D3439D200EB36C3 /* ViewController.m */,
+				EE1139851D345A1500EB36C3 /* homeworkProtocol.h */,
+				EE1139861D345BAC00EB36C3 /* Person.h */,
+				EE1139891D34663700EB36C3 /* Employee.h */,
+				EE11398A1D34663700EB36C3 /* Employee.m */,
+				EE1139871D345BAC00EB36C3 /* Person.m */,
 				EE1139711D3439D200EB36C3 /* Main.storyboard */,
 				EE1139741D3439D200EB36C3 /* Assets.xcassets */,
 				EE1139761D3439D200EB36C3 /* LaunchScreen.storyboard */,
@@ -156,6 +168,8 @@
 			files = (
 				EE1139701D3439D200EB36C3 /* ViewController.m in Sources */,
 				EE1139841D343E0800EB36C3 /* NSString+Array.m in Sources */,
+				EE1139881D345BAC00EB36C3 /* Person.m in Sources */,
+				EE11398B1D34663700EB36C3 /* Employee.m in Sources */,
 				EE11396D1D3439D200EB36C3 /* AppDelegate.m in Sources */,
 				EE11396A1D3439D200EB36C3 /* main.m in Sources */,
 			);

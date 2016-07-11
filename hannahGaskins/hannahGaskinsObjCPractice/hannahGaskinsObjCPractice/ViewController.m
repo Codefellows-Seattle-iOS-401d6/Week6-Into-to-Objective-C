@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NSString+Array.h"
+#import "Person.h"
 
 @interface ViewController ()
 
@@ -28,6 +29,12 @@
     
     NSLog(@"%i", [someNumber intValue]);
     
+    [self checkDataType:@9];
+    
+    [self checkDataType:@"happy about Objective-C"];
+    
+    [self checkDataType:@[@"happy", @2, @5, @"Objective-C", [Person new]]];
+    
 }
 
 
@@ -45,19 +52,39 @@
             [reversedString appendString:[testData substringWithRange:subStringRange]];
         }
         NSLog(@"%@", reversedString);
+        
     } else if ([testData isKindOfClass:[NSArray class]]) {
-        int counterOneInt = 0;
-        int counterTwoString = 0;
+        
+        NSMutableDictionary *database = [NSMutableDictionary new];
         
         for (id item in testData) {
-            if ([item isKindOfClass:[NSNumber class]]) {
-                counterOneInt++;
-            } else if ([item isKindOfClass:[NSString class]]) {
-                counterTwoString++;
+            if ([database objectForKey:[[item class]description]]) {
+                
+                NSNumber *countNumber = (NSNumber *)[database objectForKey:[[item class]description]];
+                
+                int count = countNumber.intValue;
+                count++;
+                
+                [database setObject:[NSNumber numberWithInt:count] forKey:[[item class]description]];
+                
             }
+            
+            else {
+                
+                [database setObject:[NSNumber numberWithInt:1] forKey:[[item class]description]];
+                
+            }
+            
+//            if ([item isKindOfClass:[NSNumber class]]) {
+//                counterOneInt++;
+//            } else if ([item isKindOfClass:[NSString class]]) {
+//                counterTwoString++;
+//            }
         }
-        NSLog(@"The array has %d elements of type Int within it", counterOneInt);
-        NSLog(@"The array has %d elements of type String within it", counterTwoString);
+        
+        NSLog(@"%@", database);
+//        NSLog(@"The array has %d elements of type Int within it", counterOneInt);
+//        NSLog(@"The array has %d elements of type String within it", counterTwoString);
     }
 }
 
