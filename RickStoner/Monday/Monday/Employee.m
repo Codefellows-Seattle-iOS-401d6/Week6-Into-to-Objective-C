@@ -24,4 +24,9 @@
     return _job;
 }
 
+-(NSNumber *)salary:(NSNumber *)hourlyWage {
+    double salary = [hourlyWage doubleValue] * 40.0 * 52.0;
+    return [NSNumber numberWithDouble: salary];
+}
+
 @end

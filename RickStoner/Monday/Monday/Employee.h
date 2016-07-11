@@ -14,5 +14,7 @@
     NSString *_job;
 }
 
+-(NSNumber *)salary: (NSNumber *)hourlyWage;
+
 
 @end
