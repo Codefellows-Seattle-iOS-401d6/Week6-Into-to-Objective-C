@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSString+Strings.h"
+#import "CheckType.h"
 
 @interface ViewController : UIViewController
+
 
 
 @end

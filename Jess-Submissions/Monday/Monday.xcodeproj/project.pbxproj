@@ -14,6 +14,8 @@
 		D9CC687B1D3414BE001D4294 /* Monday.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9CC68791D3414BE001D4294 /* Monday.xcdatamodeld */; };
 		D9CC687D1D3414BE001D4294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9CC687C1D3414BE001D4294 /* Assets.xcassets */; };
 		D9CC68801D3414BE001D4294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9CC687E1D3414BE001D4294 /* LaunchScreen.storyboard */; };
+		D9CC688D1D3439F8001D4294 /* NSString+Strings.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CC688C1D3439F8001D4294 /* NSString+Strings.m */; };
+		D9CC68AE1D3454FF001D4294 /* CheckType.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CC68AD1D3454FF001D4294 /* CheckType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		D9CC687C1D3414BE001D4294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9CC687F1D3414BE001D4294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9CC68811D3414BE001D4294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9CC688B1D3439F8001D4294 /* NSString+Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Strings.h"; sourceTree = "<group>"; };
+		D9CC688C1D3439F8001D4294 /* NSString+Strings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Strings.m"; sourceTree = "<group>"; };
+		D9CC68AC1D3454FF001D4294 /* CheckType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckType.h; sourceTree = "<group>"; };
+		D9CC68AD1D3454FF001D4294 /* CheckType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckType.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 				D9CC68701D3414BE001D4294 /* AppDelegate.h */,
 				D9CC68711D3414BE001D4294 /* AppDelegate.m */,
 				D9CC68731D3414BE001D4294 /* ViewController.h */,
+				D9CC688B1D3439F8001D4294 /* NSString+Strings.h */,
+				D9CC688C1D3439F8001D4294 /* NSString+Strings.m */,
 				D9CC68741D3414BE001D4294 /* ViewController.m */,
 				D9CC68761D3414BE001D4294 /* Main.storyboard */,
 				D9CC687C1D3414BE001D4294 /* Assets.xcassets */,
@@ -70,6 +78,8 @@
 				D9CC68811D3414BE001D4294 /* Info.plist */,
 				D9CC68791D3414BE001D4294 /* Monday.xcdatamodeld */,
 				D9CC686D1D3414BE001D4294 /* Supporting Files */,
+				D9CC68AC1D3454FF001D4294 /* CheckType.h */,
+				D9CC68AD1D3454FF001D4294 /* CheckType.m */,
 			);
 			path = Monday;
 			sourceTree = "<group>";
@@ -154,6 +164,8 @@
 			files = (
 				D9CC68751D3414BE001D4294 /* ViewController.m in Sources */,
 				D9CC68721D3414BE001D4294 /* AppDelegate.m in Sources */,
+				D9CC68AE1D3454FF001D4294 /* CheckType.m in Sources */,
+				D9CC688D1D3439F8001D4294 /* NSString+Strings.m in Sources */,
 				D9CC686F1D3414BE001D4294 /* main.m in Sources */,
 				D9CC687B1D3414BE001D4294 /* Monday.xcdatamodeld in Sources */,
 			);
@@ -306,6 +318,7 @@
 				D9CC68861D3414BE001D4294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

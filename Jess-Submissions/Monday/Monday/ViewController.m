@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "NSString+Strings.h"
+#import "CheckType.h"
+
 
 @interface ViewController ()
 
@@ -14,14 +17,31 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    NSString *myString;
+    myString = @"This is a test";
+    
+    NSArray *randomArray = [myString arrayOfWords];
+    NSLog(@"%@", randomArray);
+    
+    NSArray *anotherArray = @[@"Doggies", @10, @7, @"Cats"];
+    
+    [CheckType checkType: [NSNumber numberWithInt:10]];
+    [CheckType checkType:[NSString stringWithFormat:@"yellow"]];
+    [CheckType checkType:[[NSArray alloc]initWithArray:anotherArray]];
+    
+    
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
