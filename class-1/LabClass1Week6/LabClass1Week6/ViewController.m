@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "NSString+Array.h"
 #import "NSObject+Id.h"
+#import "Employee.h"
+
 
 @interface ViewController ()
 
@@ -23,11 +25,6 @@
     NSString *myString = @"This is my sample string";
     NSArray *myArray = [myString toArray];
     NSLog(@"%@", myArray);
-    
-    // Test homework question two:
-    
-    // Test homework question three:
-    
 }
 
 - (void)didReceiveMemoryWarning {
