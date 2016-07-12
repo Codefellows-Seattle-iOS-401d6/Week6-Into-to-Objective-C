@@ -16,6 +16,7 @@
 		D9CC68801D3414BE001D4294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9CC687E1D3414BE001D4294 /* LaunchScreen.storyboard */; };
 		D9CC688D1D3439F8001D4294 /* NSString+Strings.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CC688C1D3439F8001D4294 /* NSString+Strings.m */; };
 		D9CC68AE1D3454FF001D4294 /* CheckType.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CC68AD1D3454FF001D4294 /* CheckType.m */; };
+		D9CC68B21D34669C001D4294 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CC68B11D34669C001D4294 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		D9CC688C1D3439F8001D4294 /* NSString+Strings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Strings.m"; sourceTree = "<group>"; };
 		D9CC68AC1D3454FF001D4294 /* CheckType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckType.h; sourceTree = "<group>"; };
 		D9CC68AD1D3454FF001D4294 /* CheckType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckType.m; sourceTree = "<group>"; };
+		D9CC68AF1D34649A001D4294 /* ZooAnimals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZooAnimals.h; sourceTree = "<group>"; };
+		D9CC68B01D34669C001D4294 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D9CC68B11D34669C001D4294 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,9 @@
 				D9CC688B1D3439F8001D4294 /* NSString+Strings.h */,
 				D9CC688C1D3439F8001D4294 /* NSString+Strings.m */,
 				D9CC68741D3414BE001D4294 /* ViewController.m */,
+				D9CC68AF1D34649A001D4294 /* ZooAnimals.h */,
+				D9CC68B01D34669C001D4294 /* Person.h */,
+				D9CC68B11D34669C001D4294 /* Person.m */,
 				D9CC68761D3414BE001D4294 /* Main.storyboard */,
 				D9CC687C1D3414BE001D4294 /* Assets.xcassets */,
 				D9CC687E1D3414BE001D4294 /* LaunchScreen.storyboard */,
@@ -164,6 +171,7 @@
 			files = (
 				D9CC68751D3414BE001D4294 /* ViewController.m in Sources */,
 				D9CC68721D3414BE001D4294 /* AppDelegate.m in Sources */,
+				D9CC68B21D34669C001D4294 /* Person.m in Sources */,
 				D9CC68AE1D3454FF001D4294 /* CheckType.m in Sources */,
 				D9CC688D1D3439F8001D4294 /* NSString+Strings.m in Sources */,
 				D9CC686F1D3414BE001D4294 /* main.m in Sources */,
