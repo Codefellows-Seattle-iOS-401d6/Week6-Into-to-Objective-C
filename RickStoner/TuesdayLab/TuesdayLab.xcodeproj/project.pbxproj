@@ -13,6 +13,7 @@
 		046C80D01D35812600A914E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046C80CE1D35812600A914E4 /* Main.storyboard */; };
 		046C80D21D35812600A914E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046C80D11D35812600A914E4 /* Assets.xcassets */; };
 		046C80D51D35812600A914E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046C80D31D35812600A914E4 /* LaunchScreen.storyboard */; };
+		046C80E11D3581BD00A914E4 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 046C80E01D3581BD00A914E4 /* Address.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		046C80D11D35812600A914E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046C80D41D35812600A914E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		046C80D61D35812600A914E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046C80DF1D3581BD00A914E4 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		046C80E01D3581BD00A914E4 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				046C80DE1D35816300A914E4 /* App Global */,
-				046C80DD1D35815300A914E4 /* Controller */,
+				046C80E21D3581C200A914E4 /* Model */,
 				046C80DC1D35814500A914E4 /* View */,
+				046C80DD1D35815300A914E4 /* Controller */,
 				046C80C51D35812600A914E4 /* Supporting Files */,
 			);
 			path = TuesdayLab;
@@ -101,6 +105,15 @@
 				046C80D61D35812600A914E4 /* Info.plist */,
 			);
 			name = "App Global";
+			sourceTree = "<group>";
+		};
+		046C80E21D3581C200A914E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				046C80DF1D3581BD00A914E4 /* Address.h */,
+				046C80E01D3581BD00A914E4 /* Address.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +188,7 @@
 			files = (
 				046C80CD1D35812600A914E4 /* ViewController.m in Sources */,
 				046C80CA1D35812600A914E4 /* AppDelegate.m in Sources */,
+				046C80E11D3581BD00A914E4 /* Address.m in Sources */,
 				046C80C71D35812600A914E4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
