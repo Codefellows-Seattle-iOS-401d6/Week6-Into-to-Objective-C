@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045C26051D35D14300DC7738 /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 045C26041D35D14300DC7738 /* UserDefaults.m */; };
 		046C80C71D35812600A914E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 046C80C61D35812600A914E4 /* main.m */; };
 		046C80CA1D35812600A914E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 046C80C91D35812600A914E4 /* AppDelegate.m */; };
 		046C80CD1D35812600A914E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046C80CC1D35812600A914E4 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045C26031D35D14300DC7738 /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
+		045C26041D35D14300DC7738 /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
 		046C80C21D35812600A914E4 /* TuesdayLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuesdayLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046C80C61D35812600A914E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		046C80C81D35812600A914E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 		046C80C51D35812600A914E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				045C26031D35D14300DC7738 /* UserDefaults.h */,
+				045C26041D35D14300DC7738 /* UserDefaults.m */,
 				046C80C61D35812600A914E4 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -187,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046C80CD1D35812600A914E4 /* ViewController.m in Sources */,
+				045C26051D35D14300DC7738 /* UserDefaults.m in Sources */,
 				046C80CA1D35812600A914E4 /* AppDelegate.m in Sources */,
 				046C80E11D3581BD00A914E4 /* Address.m in Sources */,
 				046C80C71D35812600A914E4 /* main.m in Sources */,
@@ -342,6 +348,7 @@
 				046C80DB1D35812600A914E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
