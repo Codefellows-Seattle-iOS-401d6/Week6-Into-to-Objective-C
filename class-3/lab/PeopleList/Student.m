@@ -7,6 +7,7 @@
 //
 
 #import "Student.h"
+#import "Student+Extensions.h"
 
 @interface Student () <NSCoding>
 
@@ -36,7 +37,7 @@
 - (void)setLastName:(NSString *)lastName
 {
     if (_lastName != lastName ) {
-        _lastName = [_lastName copy];
+        _lastName = [lastName copy];
     }
 }
 
@@ -50,7 +51,7 @@
 - (void)setFirstName:(NSString *)firstName
 {
     if (_firstName != firstName ) {
-        _firstName = [_firstName copy];
+        _firstName = [firstName copy];
     }
 }
 
@@ -62,7 +63,7 @@
 - (void)setEmail:(NSString *)email
 {
     if (_email != email ) {
-        _email = [_email copy];
+        _email = [email copy];
     }
 }
 
@@ -75,7 +76,7 @@
 - (void)setPhone:(NSString *)phone
 {
     if (_phone != phone ) {
-        _phone = [_phone copy];
+        _phone = [phone copy];
     }
 }
 

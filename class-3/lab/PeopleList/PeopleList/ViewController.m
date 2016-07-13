@@ -14,6 +14,7 @@
 
 @interface ViewController () <UITableViewDataSource>
 // IB outlet goes here tableView
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 
@@ -67,7 +68,10 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle ==)
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [[Store shared]removeStudentAtIndexPath:indexPath];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    }
 }
 
 @end

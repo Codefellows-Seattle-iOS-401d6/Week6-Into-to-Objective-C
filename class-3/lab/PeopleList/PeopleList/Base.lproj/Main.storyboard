@@ -68,6 +68,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="jlm-iS-fbJ" id="4h4-L3-IyT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,8 +136,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="firstNameUserField" destination="ob8-DU-QQy" id="gPj-8W-KvV"/>
-                        <outlet property="lastNameUserField" destination="Jo5-hq-jKM" id="kE9-F4-oVZ"/>
+                        <outlet property="emailField" destination="cwd-xH-A8C" id="sNE-zG-B1b"/>
+                        <outlet property="firstNameUserField" destination="ob8-DU-QQy" id="FTu-xI-NxW"/>
+                        <outlet property="lastNameUserField" destination="Jo5-hq-jKM" id="cUZ-rm-HcP"/>
+                        <outlet property="phoneField" destination="Mml-5Y-wzq" id="Q4l-x2-TTm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4G-7W-7Mv" userLabel="First Responder" sceneMemberID="firstResponder"/>

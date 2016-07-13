@@ -7,8 +7,8 @@
 //
 
 #import "AddViewController.h"
-#import "Student.h"
 #import "Store.h"
+#import "Student+Extensions.h"
 
 
 @interface AddViewController ()
@@ -17,6 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameUserField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameUserField;
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneField;
 
 - (IBAction)saveButtonSelected:(id)sender;
 
@@ -29,7 +31,8 @@
     return NSStringFromClass(self);
 }
 
-- (Student *)student{
+- (Student *)student
+{
     if (! _student){
         _student = [[Student alloc]init];
     }
@@ -65,7 +68,7 @@
     if (self.student.isValid && self.completion)
     {
         [[Store shared]add: self.student];
-        [self completion];
+        [self completion]();
         
         [self.navigationController popViewControllerAnimated:YES];
     }
