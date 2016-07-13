@@ -7,11 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Address.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        NSLog(@"Hello, World!");
+        Address *address1 = [[Address alloc]init];
+        address1.name = @"Sung";
+        address1.email = @"sung@gmail.com";
+        
+        NSLog(@"Name: %@", address1.name);
+        NSLog(@"Email: %@", address1.email);
+        NSLog(@"Description: %@", [address1 description]);
+        
+        [address1 release];
     }
     return 0;
 }
