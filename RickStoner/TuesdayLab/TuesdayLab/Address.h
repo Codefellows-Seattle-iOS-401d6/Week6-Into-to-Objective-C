@@ -13,12 +13,15 @@
 {
     NSString *_name;
     NSString *_city;
-    NSString *_State;
+    NSString *_state;
     
 }
 
 - (void)setName:(NSString *)name;
 - (void)setCity:(NSString *)city;
 - (void)setState:(NSString *)state;
+
+-(NSString *)description;
+- (void)dealloc;
 
 @end

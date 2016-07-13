@@ -37,5 +37,35 @@
     }
 }
 
+- (NSString *)state{
+    return _state;
+}
+
+- (void)setState:(NSString *)state {
+    if (_state != state) {
+        [state retain];
+        [_state release];
+        
+        _state = state;
+    }
+}
+
+-(NSString *)description{
+    NSString *description = [[[NSString alloc]initWithFormat:@"Name: %@, Location: %@, %@", self.name, self.city, self.state]autorelease];
+    
+    return description;
+}
+
+- (void)dealloc{
+    
+    [_name release];
+    [_city release];
+    [_state release];
+    
+    NSLog(@"Retain count: %li", [self retainCount]);
+    
+    [super dealloc];
+}
+
 
 @end

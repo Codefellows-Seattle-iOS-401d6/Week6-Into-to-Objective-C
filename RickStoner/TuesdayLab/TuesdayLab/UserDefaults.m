@@ -45,7 +45,7 @@
         }
     }
     
-    return [[NSMutableDictionary alloc]init];
+    return [[[NSMutableDictionary alloc]init]autorelease];
 }
 
 
