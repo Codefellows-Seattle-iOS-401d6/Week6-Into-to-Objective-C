@@ -15,6 +15,8 @@
 		149FD1981D36DB5400ABCF37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149FD1961D36DB5400ABCF37 /* LaunchScreen.storyboard */; };
 		149FD1A11D36DB6500ABCF37 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149FD1A01D36DB6500ABCF37 /* CloudKit.framework */; };
 		149FD1A81D36DBBF00ABCF37 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1A71D36DBBF00ABCF37 /* Student.m */; };
+		149FD1AB1D36DFD900ABCF37 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1AA1D36DFD900ABCF37 /* Store.m */; };
+		149FD1AF1D36E1E600ABCF37 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1AE1D36E1E600ABCF37 /* NSString+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		149FD1A01D36DB6500ABCF37 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		149FD1A61D36DBBF00ABCF37 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		149FD1A71D36DBBF00ABCF37 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		149FD1A91D36DFD900ABCF37 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		149FD1AA1D36DFD900ABCF37 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		149FD1AD1D36E1E600ABCF37 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		149FD1AE1D36E1E600ABCF37 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,8 @@
 				149FD1A31D36DB7C00ABCF37 /* Controller */,
 				149FD1A51D36DB9900ABCF37 /* Model */,
 				149FD1A41D36DB8100ABCF37 /* View */,
+				149FD1B01D36E1EA00ABCF37 /* Extension */,
+				149FD1AC1D36DFDD00ABCF37 /* Service */,
 				149FD1881D36DB5400ABCF37 /* Supporting Files */,
 			);
 			path = StudentsDirectory;
@@ -120,6 +128,24 @@
 				149FD1A71D36DBBF00ABCF37 /* Student.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		149FD1AC1D36DFDD00ABCF37 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				149FD1A91D36DFD900ABCF37 /* Store.h */,
+				149FD1AA1D36DFD900ABCF37 /* Store.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		149FD1B01D36E1EA00ABCF37 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				149FD1AD1D36E1E600ABCF37 /* NSString+Extension.h */,
+				149FD1AE1D36E1E600ABCF37 /* NSString+Extension.m */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				149FD1901D36DB5400ABCF37 /* ViewController.m in Sources */,
+				149FD1AF1D36E1E600ABCF37 /* NSString+Extension.m in Sources */,
 				149FD18D1D36DB5400ABCF37 /* AppDelegate.m in Sources */,
 				149FD18A1D36DB5400ABCF37 /* main.m in Sources */,
+				149FD1AB1D36DFD900ABCF37 /* Store.m in Sources */,
 				149FD1A81D36DBBF00ABCF37 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
