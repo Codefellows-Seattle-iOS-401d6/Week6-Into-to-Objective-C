@@ -96,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				044252CA1D36D62500620AAB /* Main.storyboard */,
-				044252E71D37180100620AAB /* InputViewController.h */,
-				044252E81D37180100620AAB /* InputViewController.m */,
 				044252CD1D36D62500620AAB /* Assets.xcassets */,
 				044252CF1D36D62500620AAB /* LaunchScreen.storyboard */,
 			);
@@ -107,6 +105,8 @@
 		044252D91D36D63C00620AAB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				044252E71D37180100620AAB /* InputViewController.h */,
+				044252E81D37180100620AAB /* InputViewController.m */,
 				044252C71D36D62500620AAB /* ViewController.h */,
 				044252C81D36D62500620AAB /* ViewController.m */,
 			);

@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *lastNameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *courseField;
-- (IBAction)saveButton:(id)sender;
+- (IBAction)saveButton:(UIButton *)sender;
 
 
 @end
@@ -28,6 +28,37 @@
     return NSStringFromClass(self);
 }
 
-- (IBAction)saveButton:(id)sender {
+- (Student *)student
+{
+    if (!_student) {
+        _student = [[Student alloc]init];
+    }
+    
+    return _student;
 }
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+- (IBAction)saveButton:(UIButton *)sender
+{
+    self.student.firstName = self.firstNameField.text;
+    self.student.lastName = self.lastNameField.text;
+    self.student.email = self.emailField.text;
+    self.student.course = self.courseField.text;
+    
+    if (self.student.isValid && self.completion) {
+        [[Store shared]add:self.student];
+        [self completion]();
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 @end
