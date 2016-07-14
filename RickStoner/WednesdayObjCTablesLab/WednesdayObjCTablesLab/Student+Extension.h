@@ -7,9 +7,13 @@
 //
 
 #import "Student.h"
+@import CloudKit;
+
+typedef void(^StudentCompletion)(NSArray <Student *> *);
 
 @interface Student (Extension)
 
 - (BOOL)isValid;
++ (void)studentsFromRecords:(NSArray <CKRecord *> *)record completion:(StudentCompletion)completion;
 
 @end

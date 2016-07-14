@@ -18,6 +18,7 @@
 		044252E51D37130B00620AAB /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252E41D37130B00620AAB /* NSString+Extension.m */; };
 		044252E91D37180100620AAB /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252E81D37180100620AAB /* InputViewController.m */; };
 		044252EC1D37195800620AAB /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252EB1D37195800620AAB /* Student+Extension.m */; };
+		04C9EFB21D38247300846746 /* CloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9EFB11D38247300846746 /* CloudService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		044252E81D37180100620AAB /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
 		044252EA1D37195800620AAB /* Student+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
 		044252EB1D37195800620AAB /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
+		04C9EFB01D38247300846746 /* CloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudService.h; sourceTree = "<group>"; };
+		04C9EFB11D38247300846746 /* CloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 		044252E21D36DBE100620AAB /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				04C9EFB01D38247300846746 /* CloudService.h */,
+				04C9EFB11D38247300846746 /* CloudService.m */,
 				044252DF1D36DBDB00620AAB /* Store.h */,
 				044252E01D36DBDB00620AAB /* Store.m */,
 			);
@@ -224,6 +229,7 @@
 			files = (
 				044252E91D37180100620AAB /* InputViewController.m in Sources */,
 				044252C91D36D62500620AAB /* ViewController.m in Sources */,
+				04C9EFB21D38247300846746 /* CloudService.m in Sources */,
 				044252E51D37130B00620AAB /* NSString+Extension.m in Sources */,
 				044252C61D36D62500620AAB /* AppDelegate.m in Sources */,
 				044252C31D36D62500620AAB /* main.m in Sources */,
@@ -380,6 +386,7 @@
 				044252D71D36D62500620AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -28,8 +28,7 @@
     return NSStringFromClass(self);
 }
 
-- (Student *)student
-{
+- (Student *)student {
     if (!_student) {
         _student = [[Student alloc]init];
     }
