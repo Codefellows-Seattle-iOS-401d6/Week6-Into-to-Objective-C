@@ -17,4 +17,9 @@
     return [[documentDirectory URLByAppendingPathComponent:@"store"]path];
 }
 
+- (BOOL)isValidEmail
+{
+    return [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$"] evaluateWithObject:self];
+}
+
 @end

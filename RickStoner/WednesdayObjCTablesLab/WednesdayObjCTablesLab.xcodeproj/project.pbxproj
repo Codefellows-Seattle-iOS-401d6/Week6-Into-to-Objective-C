@@ -16,6 +16,8 @@
 		044252DD1D36D6C900620AAB /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252DC1D36D6C900620AAB /* Student.m */; };
 		044252E11D36DBDB00620AAB /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252E01D36DBDB00620AAB /* Store.m */; };
 		044252E51D37130B00620AAB /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252E41D37130B00620AAB /* NSString+Extension.m */; };
+		044252E91D37180100620AAB /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252E81D37180100620AAB /* InputViewController.m */; };
+		044252EC1D37195800620AAB /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252EB1D37195800620AAB /* Student+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		044252E01D36DBDB00620AAB /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		044252E31D37130B00620AAB /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		044252E41D37130B00620AAB /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		044252E71D37180100620AAB /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
+		044252E81D37180100620AAB /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
+		044252EA1D37195800620AAB /* Student+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
+		044252EB1D37195800620AAB /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				044252CA1D36D62500620AAB /* Main.storyboard */,
+				044252E71D37180100620AAB /* InputViewController.h */,
+				044252E81D37180100620AAB /* InputViewController.m */,
 				044252CD1D36D62500620AAB /* Assets.xcassets */,
 				044252CF1D36D62500620AAB /* LaunchScreen.storyboard */,
 			);
@@ -136,6 +144,8 @@
 		044252E61D37131000620AAB /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				044252EA1D37195800620AAB /* Student+Extension.h */,
+				044252EB1D37195800620AAB /* Student+Extension.m */,
 				044252E31D37130B00620AAB /* NSString+Extension.h */,
 				044252E41D37130B00620AAB /* NSString+Extension.m */,
 			);
@@ -212,10 +222,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044252E91D37180100620AAB /* InputViewController.m in Sources */,
 				044252C91D36D62500620AAB /* ViewController.m in Sources */,
 				044252E51D37130B00620AAB /* NSString+Extension.m in Sources */,
 				044252C61D36D62500620AAB /* AppDelegate.m in Sources */,
 				044252C31D36D62500620AAB /* main.m in Sources */,
+				044252EC1D37195800620AAB /* Student+Extension.m in Sources */,
 				044252E11D36DBDB00620AAB /* Store.m in Sources */,
 				044252DD1D36D6C900620AAB /* Student.m in Sources */,
 			);

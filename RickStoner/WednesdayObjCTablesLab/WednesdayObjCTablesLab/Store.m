@@ -44,7 +44,7 @@
 - (instancetype)init {
     self = [super init];
     
-    if (self) {
+    if (self) {  //checks to see if anything is saved in NSKeyArchive, it not creates empty array
         _students = [NSKeyedUnarchiver unarchiveObjectWithData:[NSData dataWithContentsOfFile:[NSString archivePath]]];
         if (!_students) {
             _students = [[NSMutableArray alloc]init];
@@ -68,7 +68,7 @@
     [self remove:[self studentForIndexPath:indexPath]];
 }
 
-- (void)save {
+- (void)save { //saves to path determined by NSString extension
     [NSKeyedArchiver archiveRootObject:self.students toFile:[NSString archivePath]];
 }
 

@@ -11,5 +11,7 @@
 @interface NSString (Extension)
 
 + (NSString *)archivePath;
+- (BOOL)isValidEmail;
+
 
 @end
