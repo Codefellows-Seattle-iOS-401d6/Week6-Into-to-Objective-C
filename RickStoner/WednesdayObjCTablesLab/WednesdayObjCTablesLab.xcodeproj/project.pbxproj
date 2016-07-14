@@ -14,6 +14,8 @@
 		044252CE1D36D62500620AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044252CD1D36D62500620AAB /* Assets.xcassets */; };
 		044252D11D36D62500620AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044252CF1D36D62500620AAB /* LaunchScreen.storyboard */; };
 		044252DD1D36D6C900620AAB /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252DC1D36D6C900620AAB /* Student.m */; };
+		044252E11D36DBDB00620AAB /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252E01D36DBDB00620AAB /* Store.m */; };
+		044252E51D37130B00620AAB /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252E41D37130B00620AAB /* NSString+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		044252D21D36D62500620AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044252DB1D36D6C900620AAB /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		044252DC1D36D6C900620AAB /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		044252DF1D36DBDB00620AAB /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		044252E01D36DBDB00620AAB /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		044252E31D37130B00620AAB /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		044252E41D37130B00620AAB /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +68,11 @@
 			isa = PBXGroup;
 			children = (
 				044252DA1D36D64800620AAB /* App Global */,
+				044252E61D37131000620AAB /* Extension */,
 				044252DE1D36D6CE00620AAB /* Model */,
 				044252D81D36D63000620AAB /* View */,
 				044252D91D36D63C00620AAB /* Controller */,
+				044252E21D36DBE100620AAB /* Service */,
 				044252C11D36D62500620AAB /* Supporting Files */,
 			);
 			path = WednesdayObjCTablesLab;
@@ -114,6 +122,24 @@
 				044252DC1D36D6C900620AAB /* Student.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		044252E21D36DBE100620AAB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				044252DF1D36DBDB00620AAB /* Store.h */,
+				044252E01D36DBDB00620AAB /* Store.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		044252E61D37131000620AAB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				044252E31D37130B00620AAB /* NSString+Extension.h */,
+				044252E41D37130B00620AAB /* NSString+Extension.m */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,8 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				044252C91D36D62500620AAB /* ViewController.m in Sources */,
+				044252E51D37130B00620AAB /* NSString+Extension.m in Sources */,
 				044252C61D36D62500620AAB /* AppDelegate.m in Sources */,
 				044252C31D36D62500620AAB /* main.m in Sources */,
+				044252E11D36DBDB00620AAB /* Store.m in Sources */,
 				044252DD1D36D6C900620AAB /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
