@@ -19,6 +19,7 @@
 		149FD1AF1D36E1E600ABCF37 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1AE1D36E1E600ABCF37 /* NSString+Extension.m */; };
 		149FD1B31D36E96200ABCF37 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1B21D36E96200ABCF37 /* AddViewController.m */; };
 		149FD1B61D36E9DA00ABCF37 /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1B51D36E9DA00ABCF37 /* Student+Extension.m */; };
+		149FD1B91D37F45C00ABCF37 /* CloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1B81D37F45C00ABCF37 /* CloudService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		149FD1B21D36E96200ABCF37 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		149FD1B41D36E9DA00ABCF37 /* Student+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
 		149FD1B51D36E9DA00ABCF37 /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
+		149FD1B71D37F45C00ABCF37 /* CloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudService.h; sourceTree = "<group>"; };
+		149FD1B81D37F45C00ABCF37 /* CloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,13 +80,13 @@
 		149FD1871D36DB5400ABCF37 /* StudentsDirectory */ = {
 			isa = PBXGroup;
 			children = (
+				149FD1881D36DB5400ABCF37 /* Supporting Files */,
 				149FD1A21D36DB7500ABCF37 /* App Global */,
 				149FD1A31D36DB7C00ABCF37 /* Controller */,
 				149FD1A51D36DB9900ABCF37 /* Model */,
 				149FD1A41D36DB8100ABCF37 /* View */,
 				149FD1B01D36E1EA00ABCF37 /* Extension */,
 				149FD1AC1D36DFDD00ABCF37 /* Service */,
-				149FD1881D36DB5400ABCF37 /* Supporting Files */,
 			);
 			path = StudentsDirectory;
 			sourceTree = "<group>";
@@ -141,6 +144,8 @@
 		149FD1AC1D36DFDD00ABCF37 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				149FD1B71D37F45C00ABCF37 /* CloudService.h */,
+				149FD1B81D37F45C00ABCF37 /* CloudService.m */,
 				149FD1A91D36DFD900ABCF37 /* Store.h */,
 				149FD1AA1D36DFD900ABCF37 /* Store.m */,
 			);
@@ -236,6 +241,7 @@
 			files = (
 				149FD1901D36DB5400ABCF37 /* ViewController.m in Sources */,
 				149FD1AF1D36E1E600ABCF37 /* NSString+Extension.m in Sources */,
+				149FD1B91D37F45C00ABCF37 /* CloudService.m in Sources */,
 				149FD18D1D36DB5400ABCF37 /* AppDelegate.m in Sources */,
 				149FD1B31D36E96200ABCF37 /* AddViewController.m in Sources */,
 				149FD18A1D36DB5400ABCF37 /* main.m in Sources */,

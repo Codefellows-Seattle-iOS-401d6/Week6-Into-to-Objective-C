@@ -9,6 +9,7 @@
 #import "Store.h"
 #import "Student.h"
 #import "NSString+Extension.h"
+#import "CloudService.h"
 
 @interface Store ()
 
@@ -44,6 +45,33 @@
     return self;
 }
 
+- (void)addStudentsFromCloudKit:(NSArray *)students
+{
+    //if cloudkit is empty then we initialize a brand new array
+    if (students.count == 0) {
+        self.students = [[NSMutableArray alloc]init];
+    }
+    else {
+        for (Student *student in students) {
+            NSString *email = student.email;
+            BOOL found = NO;
+            
+            //this is inefficient implementation, for each student in cloudkit we will compare through enumeratation in local store
+            //checks to see if there are no duplicates
+            for (Student *localStudent in self.students) {
+                if ([email compare:localStudent.email] == NSOrderedSame) {
+                    found = YES;
+                    break;
+                }
+            }
+            
+            if (!found) {
+                [self.students addObject:student];
+            }
+        }
+    }
+}
+
 - (NSArray *)allStudents
 {
     return self.students;
@@ -59,27 +87,53 @@
     return self.students.count;
 }
 
-- (void)add:(Student *)student
+- (void)add:(Student *)student completion:(StoreCompletion)completion
 {
-    for (Student *existingStudent in self.students) {
-        if ([existingStudent isEqual:student]) {
-            return;
-        }
+//    for (Student *existingStudent in self.students) {
+//        if ([existingStudent isEqual:student]) {
+//            return;
+//        }
+//    }
+//    [self.students addObject:student];
+    
+    if (![self.students containsObject:student]) {
+        [[CloudService shared]enqueueOperation:CloudOperationSave
+                                       student:student
+                                    completion:^(BOOL success, NSArray<Student *> *students) {
+                                        if (success) {
+                                            
+                                            [self.students addObject:student];
+                                            [self save];
+                                            completion();
+                                        }
+                                    }];
     }
-    [self.students addObject:student];
+    
     
 }
 
-- (void)remove:(Student *)student
+- (void)remove:(Student *)student completion:(StoreCompletion)completion
 {
     if ([self.students containsObject:student]) {
-        [self.students removeObject:student];
+//        [self.students removeObject:student];
+        
+        [[CloudService shared]enqueueOperation:CloudOperationDelete
+                                       student:student
+                                    completion:^(BOOL success, NSArray<Student *> *students) {
+                                        if (success) {
+                                            [self.students removeObject:student];
+                                            [self save];
+                                            
+                                            completion();
+                                        }
+                                    }];
     }
 }
 
-- (void)removeStudentAtIndexPath:(NSIndexPath *)indexPath
+- (void)removeStudentAtIndexPath:(NSIndexPath *)indexPath completion:(StoreCompletion)completion
 {
-    [self remove:[self studentForIndexPath:indexPath]];
+//    [self remove:[self studentForIndexPath:indexPath]];
+    [self remove:[self studentForIndexPath:indexPath] completion:completion];
 }
 
 - (void)save

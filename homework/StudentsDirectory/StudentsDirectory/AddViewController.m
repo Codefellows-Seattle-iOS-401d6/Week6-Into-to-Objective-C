@@ -49,6 +49,21 @@
     return _student;
 }
 
+//providing feedback to the user when they do not fill out all the fields
+- (void)showAlertView
+{
+    NSString *title = @"Err...";
+    NSString *message = @"Please fill out all required information.";
+    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
+                                                                        message:message
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:nil];
+    [controller addAction:okAction];
+    [self presentViewController:controller animated:YES completion:nil];
+}
 
 - (IBAction)saveSelected:(UIButton *)sender
 {
@@ -57,10 +72,18 @@
     self.student.email = self.emailField.text;
     self.student.phone = self.phoneField.text;
     
+    
     if (self.student.isValid && self.completion) {
-        [[Store shared]add:self.student];
-        [self completion]();
-        [self.navigationController popViewControllerAnimated:YES];
+//        [[Store shared]add:self.student];
+        [[Store shared]add:self.student completion:^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self completion]();
+                [self.navigationController popViewControllerAnimated:YES];
+            });
+        }];
+    }
+    else {
+        [self showAlertView];
     }
 }
 @end
