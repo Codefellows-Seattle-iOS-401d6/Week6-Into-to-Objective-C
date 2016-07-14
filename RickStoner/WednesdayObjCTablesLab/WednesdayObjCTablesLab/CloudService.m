@@ -41,11 +41,21 @@ static NSString *const StudentRecordType = @"Student";
 }
 
 - (void)enqueueOperation:(CloudServiceCompletion)completion{
-    
+    [self retrieve:completion];
 }
 
 -(void)enqueueOperation:(CloudOperation)operation student:(Student *)student completion:(CloudServiceCompletion)completion {
+    if (operation == CloudOperationSave) {
+        [self save:student completion:completion];
+    }
     
+    if (operation == CloudOperationRetrieve) {
+        [self retrieve:completion];
+    }
+    
+    if (operation == CloudOperationDelete) {
+        [self delete:student completion:completion];
+    }
 }
 
 #pragma Mark - Helper Functions
@@ -93,7 +103,7 @@ static NSString *const StudentRecordType = @"Student";
 }
 
 - (void)retrieve:(CloudServiceCompletion)completion; {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"TRUECREDIT"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"TRUEPREDICATE"];
     CKQuery *query = [[CKQuery alloc]initWithRecordType:StudentRecordType predicate:predicate];
     
     [self.database performQuery:query inZoneWithID:nil completionHandler:^(NSArray<CKRecord *> * _Nullable results, NSError * _Nullable error) {

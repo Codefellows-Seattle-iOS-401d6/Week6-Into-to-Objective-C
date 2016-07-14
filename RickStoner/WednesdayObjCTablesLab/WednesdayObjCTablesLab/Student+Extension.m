@@ -25,8 +25,11 @@
                 
                 [students addObject:[[Student alloc]initWithFirstName:firstName lastName:lastName email:email course:course]];
             }
-        }
-    ];}
+            [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+                completion(students);
+            }];
+        }];
+    }
 }
 
 - (BOOL)isValid //verifies user input of email, first name, and last name

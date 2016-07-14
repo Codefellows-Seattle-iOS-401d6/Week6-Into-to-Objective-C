@@ -19,6 +19,7 @@
 		044252E91D37180100620AAB /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252E81D37180100620AAB /* InputViewController.m */; };
 		044252EC1D37195800620AAB /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 044252EB1D37195800620AAB /* Student+Extension.m */; };
 		04C9EFB21D38247300846746 /* CloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C9EFB11D38247300846746 /* CloudService.m */; };
+		04C9EFB51D384C1100846746 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C9EFB41D384C1100846746 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		044252EB1D37195800620AAB /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
 		04C9EFB01D38247300846746 /* CloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudService.h; sourceTree = "<group>"; };
 		04C9EFB11D38247300846746 /* CloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudService.m; sourceTree = "<group>"; };
+		04C9EFB31D384BE700846746 /* WednesdayObjCTablesLab.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WednesdayObjCTablesLab.entitlements; sourceTree = "<group>"; };
+		04C9EFB41D384C1100846746 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C9EFB51D384C1100846746 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +64,7 @@
 		044252B51D36D62500620AAB = {
 			isa = PBXGroup;
 			children = (
+				04C9EFB41D384C1100846746 /* CloudKit.framework */,
 				044252C01D36D62500620AAB /* WednesdayObjCTablesLab */,
 				044252BF1D36D62500620AAB /* Products */,
 			);
@@ -76,6 +81,7 @@
 		044252C01D36D62500620AAB /* WednesdayObjCTablesLab */ = {
 			isa = PBXGroup;
 			children = (
+				04C9EFB31D384BE700846746 /* WednesdayObjCTablesLab.entitlements */,
 				044252DA1D36D64800620AAB /* App Global */,
 				044252E61D37131000620AAB /* Extension */,
 				044252DE1D36D6CE00620AAB /* Model */,
@@ -188,6 +194,12 @@
 				TargetAttributes = {
 					044252BD1D36D62500620AAB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ABJU8Z7J96;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -349,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WednesdayObjCTablesLab/WednesdayObjCTablesLab.entitlements;
 				INFOPLIST_FILE = WednesdayObjCTablesLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.rick.WednesdayObjCTablesLab;
@@ -360,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WednesdayObjCTablesLab/WednesdayObjCTablesLab.entitlements;
 				INFOPLIST_FILE = WednesdayObjCTablesLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.rick.WednesdayObjCTablesLab;

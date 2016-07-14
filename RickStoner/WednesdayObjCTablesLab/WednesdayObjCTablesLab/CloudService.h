@@ -16,7 +16,7 @@ typedef enum : NSUInteger {
     CloudOperationDelete,
 } CloudOperation;
 
-typedef void(^CloudServiceCompletion)();
+typedef void(^CloudServiceCompletion)(BOOL success, NSArray<Student *> *students);
 
 @interface CloudService : NSObject
 

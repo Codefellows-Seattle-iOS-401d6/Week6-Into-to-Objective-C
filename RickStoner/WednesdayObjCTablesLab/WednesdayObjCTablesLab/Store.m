@@ -9,6 +9,7 @@
 #import "Store.h"
 #import "Student.h"
 #import "NSString+Extension.h"
+#import "CloudService.h"
 
 @interface Store ()
 
@@ -53,19 +54,57 @@
     return self;
 }
 
-- (void)add:(Student *)student {
-    if (![self.students containsObject:student]) {
-        [self.students addObject:student];
-    }
-}
-- (void)remove:(Student *)student{
-    if ([self.students containsObject:student]) {
-        [self.students removeObject:student];
+- (void)addStudentsFromCloudKit:(NSArray *)students {
+    if (students.count == 0) {
+        self.students = [[NSMutableArray alloc]initWithArray:students];
+    } else {
+        for (Student *student in students) {
+            NSString *email = student.email;
+            BOOL found = NO;
+            
+            for (Student *localStudents in self.students) {
+                if ([email compare:localStudents.email] == NSOrderedSame) {
+                    found = YES;
+                    break;
+                }
+            }
+            if (!found) {
+                [self.students addObject:student];
+            }
+        }
     }
 }
 
-- (void)removeStudentAtIndexPath:(NSIndexPath *)indexPath {
-    [self remove:[self studentForIndexPath:indexPath]];
+- (void)add:(Student *)student completion:(StoreCompletion)completion; {
+    if (![self.students containsObject:student]) {
+        
+        [[CloudService shared]enqueueOperation:CloudOperationSave student:student completion:^(BOOL success, NSArray<Student *> *students) {
+            if (success) {
+                [self.students addObject:student];
+                [self save];
+                
+                completion();
+            }
+        
+        }];
+    }
+}
+
+- (void)remove:(Student *)student completion:(StoreCompletion)completion;{
+    if ([self.students containsObject:student]) {
+        [[CloudService shared]enqueueOperation:CloudOperationDelete student:student completion:^(BOOL success, NSArray<Student *> *students) {
+            if (success) {
+                [self.students removeObject:student];
+                [self save];
+                
+                completion();
+            }
+        }];
+    }
+}
+
+- (void)removeStudentAtIndexPath:(NSIndexPath *)indexPath completion:(StoreCompletion)completion;{
+    [self remove:[self studentForIndexPath:indexPath] completion:completion];
 }
 
 - (void)save { //saves to path determined by NSString extension
