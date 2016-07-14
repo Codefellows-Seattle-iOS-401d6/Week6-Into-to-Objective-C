@@ -37,18 +37,15 @@
     return _student;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)saveButton:(UIButton *)sender
-{
+- (IBAction)saveButton:(UIButton *)sender {
     self.student.firstName = self.firstNameField.text;
     self.student.lastName = self.lastNameField.text;
     self.student.email = self.emailField.text;
