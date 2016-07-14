@@ -58,6 +58,23 @@
         [[Store shared]add:self.student];
         [self completion]();
         [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:@"Error"
+                                      message:@"Please fill out all fields and ensure you have a valid email Address"
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* confirm = [UIAlertAction
+                             actionWithTitle:@"OK"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 
+                             }];
+        
+        [alert addAction:confirm];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 
