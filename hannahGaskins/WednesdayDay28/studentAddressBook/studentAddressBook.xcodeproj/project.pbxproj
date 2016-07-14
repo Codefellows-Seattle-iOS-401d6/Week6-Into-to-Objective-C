@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE113A591D36B76F00EB36C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A581D36B76F00EB36C3 /* main.m */; };
+		EE113A5C1D36B76F00EB36C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A5B1D36B76F00EB36C3 /* AppDelegate.m */; };
+		EE113A5F1D36B76F00EB36C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A5E1D36B76F00EB36C3 /* ViewController.m */; };
+		EE113A621D36B76F00EB36C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE113A601D36B76F00EB36C3 /* Main.storyboard */; };
+		EE113A641D36B76F00EB36C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE113A631D36B76F00EB36C3 /* Assets.xcassets */; };
+		EE113A671D36B76F00EB36C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE113A651D36B76F00EB36C3 /* LaunchScreen.storyboard */; };
+		EE113A701D36B7A000EB36C3 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A6F1D36B7A000EB36C3 /* Student.m */; };
+		EE113A741D36BBA000EB36C3 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A731D36BBA000EB36C3 /* Store.m */; };
+		EE113A7A1D36EED600EB36C3 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A791D36EED600EB36C3 /* AddViewController.m */; };
+		EE113A7E1D36FF2B00EB36C3 /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A7D1D36FF2B00EB36C3 /* Student+Extension.m */; };
+		EE113A821D36FF5900EB36C3 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A811D36FF5900EB36C3 /* NSString+Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE113A541D36B76F00EB36C3 /* studentAddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studentAddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE113A581D36B76F00EB36C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE113A5A1D36B76F00EB36C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE113A5B1D36B76F00EB36C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE113A5D1D36B76F00EB36C3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EE113A5E1D36B76F00EB36C3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE113A611D36B76F00EB36C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE113A631D36B76F00EB36C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE113A661D36B76F00EB36C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE113A681D36B76F00EB36C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE113A6E1D36B7A000EB36C3 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		EE113A6F1D36B7A000EB36C3 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		EE113A721D36BBA000EB36C3 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		EE113A731D36BBA000EB36C3 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		EE113A781D36EED600EB36C3 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		EE113A791D36EED600EB36C3 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		EE113A7C1D36FF2B00EB36C3 /* Student+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
+		EE113A7D1D36FF2B00EB36C3 /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
+		EE113A801D36FF5900EB36C3 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		EE113A811D36FF5900EB36C3 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE113A511D36B76F00EB36C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE113A4B1D36B76F00EB36C3 = {
+			isa = PBXGroup;
+			children = (
+				EE113A561D36B76F00EB36C3 /* studentAddressBook */,
+				EE113A551D36B76F00EB36C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE113A551D36B76F00EB36C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE113A541D36B76F00EB36C3 /* studentAddressBook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE113A561D36B76F00EB36C3 /* studentAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				EE113A761D36EBA900EB36C3 /* App Global */,
+				EE113A7F1D36FF3200EB36C3 /* Extensions */,
+				EE113A711D36B7AB00EB36C3 /* Model */,
+				EE113A751D36BBAF00EB36C3 /* Service */,
+				EE113A771D36EC5700EB36C3 /* View Controller */,
+				EE113A7B1D36EFB600EB36C3 /* View */,
+				EE113A571D36B76F00EB36C3 /* Supporting Files */,
+			);
+			path = studentAddressBook;
+			sourceTree = "<group>";
+		};
+		EE113A571D36B76F00EB36C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE113A581D36B76F00EB36C3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE113A711D36B7AB00EB36C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE113A6E1D36B7A000EB36C3 /* Student.h */,
+				EE113A6F1D36B7A000EB36C3 /* Student.m */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		EE113A751D36BBAF00EB36C3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EE113A721D36BBA000EB36C3 /* Store.h */,
+				EE113A731D36BBA000EB36C3 /* Store.m */,
+			);
+			name = Service;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		EE113A761D36EBA900EB36C3 /* App Global */ = {
+			isa = PBXGroup;
+			children = (
+				EE113A5A1D36B76F00EB36C3 /* AppDelegate.h */,
+				EE113A5B1D36B76F00EB36C3 /* AppDelegate.m */,
+				EE113A681D36B76F00EB36C3 /* Info.plist */,
+			);
+			name = "App Global";
+			sourceTree = "<group>";
+		};
+		EE113A771D36EC5700EB36C3 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE113A781D36EED600EB36C3 /* AddViewController.h */,
+				EE113A791D36EED600EB36C3 /* AddViewController.m */,
+				EE113A5D1D36B76F00EB36C3 /* ViewController.h */,
+				EE113A5E1D36B76F00EB36C3 /* ViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		EE113A7B1D36EFB600EB36C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE113A601D36B76F00EB36C3 /* Main.storyboard */,
+				EE113A631D36B76F00EB36C3 /* Assets.xcassets */,
+				EE113A651D36B76F00EB36C3 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EE113A7F1D36FF3200EB36C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EE113A801D36FF5900EB36C3 /* NSString+Extension.h */,
+				EE113A811D36FF5900EB36C3 /* NSString+Extension.m */,
+				EE113A7C1D36FF2B00EB36C3 /* Student+Extension.h */,
+				EE113A7D1D36FF2B00EB36C3 /* Student+Extension.m */,
+			);
+			name = Extensions;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE113A531D36B76F00EB36C3 /* studentAddressBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE113A6B1D36B76F00EB36C3 /* Build configuration list for PBXNativeTarget "studentAddressBook" */;
+			buildPhases = (
+				EE113A501D36B76F00EB36C3 /* Sources */,
+				EE113A511D36B76F00EB36C3 /* Frameworks */,
+				EE113A521D36B76F00EB36C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = studentAddressBook;
+			productName = studentAddressBook;
+			productReference = EE113A541D36B76F00EB36C3 /* studentAddressBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE113A4C1D36B76F00EB36C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "hannah gaskins";
+				TargetAttributes = {
+					EE113A531D36B76F00EB36C3 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = EE113A4F1D36B76F00EB36C3 /* Build configuration list for PBXProject "studentAddressBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE113A4B1D36B76F00EB36C3;
+			productRefGroup = EE113A551D36B76F00EB36C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE113A531D36B76F00EB36C3 /* studentAddressBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE113A521D36B76F00EB36C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE113A671D36B76F00EB36C3 /* LaunchScreen.storyboard in Resources */,
+				EE113A641D36B76F00EB36C3 /* Assets.xcassets in Resources */,
+				EE113A621D36B76F00EB36C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE113A501D36B76F00EB36C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE113A7E1D36FF2B00EB36C3 /* Student+Extension.m in Sources */,
+				EE113A5F1D36B76F00EB36C3 /* ViewController.m in Sources */,
+				EE113A5C1D36B76F00EB36C3 /* AppDelegate.m in Sources */,
+				EE113A7A1D36EED600EB36C3 /* AddViewController.m in Sources */,
+				EE113A591D36B76F00EB36C3 /* main.m in Sources */,
+				EE113A741D36BBA000EB36C3 /* Store.m in Sources */,
+				EE113A701D36B7A000EB36C3 /* Student.m in Sources */,
+				EE113A821D36FF5900EB36C3 /* NSString+Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE113A601D36B76F00EB36C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE113A611D36B76F00EB36C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE113A651D36B76F00EB36C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE113A661D36B76F00EB36C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE113A691D36B76F00EB36C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE113A6A1D36B76F00EB36C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE113A6C1D36B76F00EB36C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = studentAddressBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hannahgaskins.studentAddressBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE113A6D1D36B76F00EB36C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = studentAddressBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hannahgaskins.studentAddressBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE113A4F1D36B76F00EB36C3 /* Build configuration list for PBXProject "studentAddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE113A691D36B76F00EB36C3 /* Debug */,
+				EE113A6A1D36B76F00EB36C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE113A6B1D36B76F00EB36C3 /* Build configuration list for PBXNativeTarget "studentAddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE113A6C1D36B76F00EB36C3 /* Debug */,
+				EE113A6D1D36B76F00EB36C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE113A4C1D36B76F00EB36C3 /* Project object */;
+}

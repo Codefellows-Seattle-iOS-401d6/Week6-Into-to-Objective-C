@@ -8,21 +8,26 @@
 
 #import "MBUserDefaults.h"
 
+// create variables within the interface
 @interface MBUserDefaults ()
 
-@property (strong, nonatomic) NSMutableDictionary *preferences;
+@property (strong, nonatomic) NSMutableDictionary *preferences; // pointer to an object that is an NSMutatbleDictionary - strong pointer
 
 @end
+
+// create code to do work in implementation
 
 @implementation MBUserDefaults
 
 + (instancetype)sharedDefaults
 {
+    
+    // equivalent to static let shared = Something() in Swift
     static MBUserDefaults *sharedDefaults = nil;
-    static dispatch_once_t onceToken;
+    static dispatch_once_t onceToken; // thread that happens once just to create the singleton
     dispatch_once(&onceToken, ^{
         sharedDefaults = [[[self class]alloc]init];
-    });
+    }); // initializing class to be used as a singleton
     
     return sharedDefaults;
 }
@@ -41,14 +46,13 @@
 - (NSMutableDictionary *)setupPreferences
 {
     NSError *error;
-    NSData *json = [NSData dataWithContentsOfURL:[self preferencesURL]
-        ];
+    NSData *json = [NSData dataWithContentsOfURL:[self preferencesURL]];
     
     if (json) {
         
         NSMutableDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:json
-                                                                    options:NSJSONReadingMutableContainers
-                                                                      error:&error];
+                                                                        options:NSJSONReadingMutableContainers
+                                                                          error:&error];
         if (!error && json) {
             return jsonData;
         }

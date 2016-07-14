@@ -12,11 +12,11 @@ static NSString * _Nonnull const kMBUserDefaultsDidUpdate = @"com.hannahgaskins.
 
 @interface MBUserDefaults : NSObject
 
-+ (nonnull instancetype)sharedDefaults;
++ (nonnull instancetype)sharedDefaults; // singleton that needs initialization right when you start the project
 
-- (void)setObject:(nonnull id)object forKey:(nonnull NSString *)key;
-- (nullable id)objectForKey:(nonnull NSString *)key;
+- (void)setObject:(nonnull id)object forKey:(nonnull NSString *)key; // setting the object
+- (nullable id)objectForKey:(nonnull NSString *)key; // getting the object
 
-- (void)reset;
+- (void)reset; // method to delete files
 
 @end
