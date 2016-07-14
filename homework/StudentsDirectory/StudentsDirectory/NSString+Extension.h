@@ -12,4 +12,6 @@
 
 + (NSString *)archivePath;
 
+- (BOOL)isValidEmail;
+
 @end

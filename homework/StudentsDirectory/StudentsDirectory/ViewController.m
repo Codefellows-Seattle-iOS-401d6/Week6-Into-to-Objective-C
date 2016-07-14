@@ -9,8 +9,9 @@
 #import "ViewController.h"
 #import "Store.h"
 #import "Student.h"
+#import "AddViewController.h"
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -28,6 +29,16 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString: [AddViewController identifier]]) {
+        AddViewController *addViewController = (AddViewController *)segue.destinationViewController;
+        addViewController.completion = ^ {
+            [self.tableView reloadData];
+        };
+    }
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -41,7 +52,7 @@
     
     Student *student = [[Store shared]studentForIndexPath:indexPath];
     studentCell.textLabel.text = [NSString stringWithFormat:@"%@ %@", student.firstName, student.lastName];
-    studentCell.detailTextLabel.text = [NSString stringWithFormat:@"Email: %@ Phont:%@", student.email, student.phone];
+    studentCell.detailTextLabel.text = [NSString stringWithFormat:@"Email: %@ Phone:%@", student.email, student.phone];
     
     return studentCell;
 }

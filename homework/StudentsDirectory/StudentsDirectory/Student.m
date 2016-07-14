@@ -86,6 +86,11 @@
     return _phone;
 }
 
+- (BOOL)isEqual:(Student *)student
+{
+    return [self.firstName isEqualToString:student.firstName] && [self.lastName isEqualToString:student.lastName] && [self.email isEqualToString:student.email] && [self.phone isEqualToString:student.phone];
+}
+
 #pragma mark - NSCoding
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder

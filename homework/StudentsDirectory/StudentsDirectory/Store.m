@@ -61,9 +61,13 @@
 
 - (void)add:(Student *)student
 {
-    if (![self.students containsObject:student]) {
-        [self.students addObject:student];
+    for (Student *existingStudent in self.students) {
+        if ([existingStudent isEqual:student]) {
+            return;
+        }
     }
+    [self.students addObject:student];
+    
 }
 
 - (void)remove:(Student *)student

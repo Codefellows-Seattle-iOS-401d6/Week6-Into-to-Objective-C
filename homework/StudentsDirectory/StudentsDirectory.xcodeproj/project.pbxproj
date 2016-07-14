@@ -17,6 +17,8 @@
 		149FD1A81D36DBBF00ABCF37 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1A71D36DBBF00ABCF37 /* Student.m */; };
 		149FD1AB1D36DFD900ABCF37 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1AA1D36DFD900ABCF37 /* Store.m */; };
 		149FD1AF1D36E1E600ABCF37 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1AE1D36E1E600ABCF37 /* NSString+Extension.m */; };
+		149FD1B31D36E96200ABCF37 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1B21D36E96200ABCF37 /* AddViewController.m */; };
+		149FD1B61D36E9DA00ABCF37 /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD1B51D36E9DA00ABCF37 /* Student+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		149FD1AA1D36DFD900ABCF37 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		149FD1AD1D36E1E600ABCF37 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		149FD1AE1D36E1E600ABCF37 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		149FD1B11D36E96200ABCF37 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		149FD1B21D36E96200ABCF37 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		149FD1B41D36E9DA00ABCF37 /* Student+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
+		149FD1B51D36E9DA00ABCF37 /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,8 @@
 		149FD1A31D36DB7C00ABCF37 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				149FD1B11D36E96200ABCF37 /* AddViewController.h */,
+				149FD1B21D36E96200ABCF37 /* AddViewController.m */,
 				149FD18E1D36DB5400ABCF37 /* ViewController.h */,
 				149FD18F1D36DB5400ABCF37 /* ViewController.m */,
 			);
@@ -144,6 +152,8 @@
 			children = (
 				149FD1AD1D36E1E600ABCF37 /* NSString+Extension.h */,
 				149FD1AE1D36E1E600ABCF37 /* NSString+Extension.m */,
+				149FD1B41D36E9DA00ABCF37 /* Student+Extension.h */,
+				149FD1B51D36E9DA00ABCF37 /* Student+Extension.m */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -227,7 +237,9 @@
 				149FD1901D36DB5400ABCF37 /* ViewController.m in Sources */,
 				149FD1AF1D36E1E600ABCF37 /* NSString+Extension.m in Sources */,
 				149FD18D1D36DB5400ABCF37 /* AppDelegate.m in Sources */,
+				149FD1B31D36E96200ABCF37 /* AddViewController.m in Sources */,
 				149FD18A1D36DB5400ABCF37 /* main.m in Sources */,
+				149FD1B61D36E9DA00ABCF37 /* Student+Extension.m in Sources */,
 				149FD1AB1D36DFD900ABCF37 /* Store.m in Sources */,
 				149FD1A81D36DBBF00ABCF37 /* Student.m in Sources */,
 			);

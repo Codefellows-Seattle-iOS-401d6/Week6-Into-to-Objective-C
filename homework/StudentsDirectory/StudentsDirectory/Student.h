@@ -38,4 +38,6 @@
 - (void)setPhone:(NSString *)phone;
 - (NSString *)phone;
 
+- (BOOL)isEqual:(Student *)student;
+
 @end
