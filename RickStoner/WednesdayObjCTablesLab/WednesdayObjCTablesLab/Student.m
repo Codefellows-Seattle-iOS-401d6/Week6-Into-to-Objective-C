@@ -76,7 +76,7 @@
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     NSString *firstName = [aDecoder decodeObjectForKey:@"firstName"];
-    NSString *lastName = [aDecoder decodeObjectForKey:@"lasttName"];
+    NSString *lastName = [aDecoder decodeObjectForKey:@"lastName"];
     NSString *email = [aDecoder decodeObjectForKey:@"email"];
     NSString *course = [aDecoder decodeObjectForKey:@"course"];
     

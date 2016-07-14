@@ -56,6 +56,7 @@
     
     if (self.student.isValid && self.completion) {
         [[Store shared]add:self.student];
+        [[Store shared]save];
         [self completion]();
         [self.navigationController popViewControllerAnimated:YES];
     } else {
