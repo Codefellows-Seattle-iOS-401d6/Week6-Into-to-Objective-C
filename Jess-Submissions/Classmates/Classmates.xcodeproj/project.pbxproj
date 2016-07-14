@@ -19,6 +19,7 @@
 		D9CC697A1D36C0D6001D4294 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CC69791D36C0D6001D4294 /* NSString+Extension.m */; };
 		D9CC697F1D36C4F1001D4294 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CC697E1D36C4F1001D4294 /* AddViewController.m */; };
 		D9CC69851D36CC1A001D4294 /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CC69841D36CC1A001D4294 /* Student+Extension.m */; };
+		D9CC69881D37F420001D4294 /* CloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CC69871D37F420001D4294 /* CloudService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		D9CC697E1D36C4F1001D4294 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddViewController.m; path = ../AddViewController.m; sourceTree = "<group>"; };
 		D9CC69831D36CC1A001D4294 /* Student+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
 		D9CC69841D36CC1A001D4294 /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
+		D9CC69861D37F420001D4294 /* CloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CloudService.h; path = Classmates/CloudService.h; sourceTree = "<group>"; };
+		D9CC69871D37F420001D4294 /* CloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CloudService.m; path = Classmates/CloudService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +83,7 @@
 			children = (
 				D9CC696B1D36B72F001D4294 /* Classmates.entitlements */,
 				D9CC696E1D36B75C001D4294 /* App Global */,
-				D9CC696F1D36B769001D4294 /* Controller */,
+				D9CC696F1D36B769001D4294 /* View Controller */,
 				D9CC697B1D36C0E1001D4294 /* Extension */,
 				D9CC69741D36B7AC001D4294 /* Model */,
 				D9CC697C1D36C22A001D4294 /* Service */,
@@ -108,7 +111,7 @@
 			name = "App Global";
 			sourceTree = "<group>";
 		};
-		D9CC696F1D36B769001D4294 /* Controller */ = {
+		D9CC696F1D36B769001D4294 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				D9CC697D1D36C4F1001D4294 /* AddViewController.h */,
@@ -116,7 +119,7 @@
 				D9CC695A1D36B720001D4294 /* ViewController.h */,
 				D9CC695B1D36B720001D4294 /* ViewController.m */,
 			);
-			name = Controller;
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 		D9CC69701D36B773001D4294 /* View */ = {
@@ -154,6 +157,8 @@
 		D9CC697C1D36C22A001D4294 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				D9CC69861D37F420001D4294 /* CloudService.h */,
+				D9CC69871D37F420001D4294 /* CloudService.m */,
 				D9CC69751D36BBA2001D4294 /* Store.h */,
 				D9CC69761D36BBA2001D4294 /* Store.m */,
 			);
@@ -239,6 +244,7 @@
 			files = (
 				D9CC695C1D36B720001D4294 /* ViewController.m in Sources */,
 				D9CC697A1D36C0D6001D4294 /* NSString+Extension.m in Sources */,
+				D9CC69881D37F420001D4294 /* CloudService.m in Sources */,
 				D9CC69591D36B720001D4294 /* AppDelegate.m in Sources */,
 				D9CC697F1D36C4F1001D4294 /* AddViewController.m in Sources */,
 				D9CC69561D36B720001D4294 /* main.m in Sources */,
@@ -359,10 +365,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Classmates/Classmates.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Classmates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JessMalesh.Classmates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -371,10 +380,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Classmates/Classmates.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Classmates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JessMalesh.Classmates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -397,6 +409,7 @@
 				D9CC696A1D36B720001D4294 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

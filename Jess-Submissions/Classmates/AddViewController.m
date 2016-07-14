@@ -49,6 +49,23 @@
     [super didReceiveMemoryWarning];
 }
 
+//create alert to notify if all are not filled out
+
+- (void)showAlertView
+{
+    NSString *title = @"Err...";
+    NSString *message = @"Please fill out all required information";
+    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
+                                                                        message:message
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    [controller addAction:okAction];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
 - (IBAction)saveButtonSelected:(UIButton *)sender {
     
     self.student.firstName = self.firstNameField.text;
@@ -58,9 +75,14 @@
     
     
     if (self.student.isValid && self.completion) {
-        [[Store shared]add:self.student];
-        [self completion]();
-        [self.navigationController popViewControllerAnimated:YES];
+        [[Store shared]add:self.student completion:^{
+            [self completion]();
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+    }
+    
+    else {
+        [self showAlertView];
     }
 }
 

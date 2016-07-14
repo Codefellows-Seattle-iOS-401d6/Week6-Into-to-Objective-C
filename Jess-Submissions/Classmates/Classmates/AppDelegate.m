@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Store.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,8 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     return YES;
 }
 
@@ -26,16 +27,14 @@
     [[Store shared]save];
 }
 
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    ViewController *viewController = (ViewController *)navigationController.topViewController;
 
-- (void)applicationDidEnterBackground:(UIApplication *)application { }
-
-- (void)applicationWillEnterForeground:(UIApplication *)application { }
-
-- (void)applicationDidBecomeActive:(UIApplication *)application { }
-
-- (void)applicationWillTerminate:(UIApplication *)application { }
-
-
+    [viewController updateStudent];
+}
 
 
 @end
+
