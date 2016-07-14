@@ -10,6 +10,7 @@
 #import "Store.h"
 #import "Student.h"
 #import "AddViewController.h"
+#import "CloudService.h"
 
 @interface ViewController () <UITableViewDataSource>
 
@@ -21,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[CloudService shared]enqueueOperation:^(BOOL success, NSArray<Student *> *students) {
+        NSLog(@"%@", students);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,6 +38,14 @@
             [self.tableView reloadData];
         };
     }
+}
+
+- (void)updateStudents {
+    __weak typeof(self) weakSelf = self;
+    [[CloudService shared]enqueueOperation:^(BOOL success, NSArray<Student *> *students) {
+        [[Store shared]addStudentfromCloudKit:students];
+        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationRight];
+    }];
 }
 
 #pragma mark - UITableViewSource
@@ -60,8 +72,9 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        [[Store shared]removeStudentAtIndexPath:indexPath];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        [[Store shared]removeStudentAtIndexPath:indexPath completion:^{
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        }];
     }
 }
 

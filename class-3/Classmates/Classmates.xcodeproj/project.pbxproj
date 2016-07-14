@@ -18,6 +18,8 @@
 		0D53FE5E1D36C0E50084031A /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53FE5D1D36C0E50084031A /* NSString+Extension.m */; };
 		0D53FE631D36C4E90084031A /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53FE621D36C4E90084031A /* AddViewController.m */; };
 		0D53FE661D36CBA50084031A /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53FE651D36CBA50084031A /* Student+Extension.m */; };
+		0D53FE691D37F41D0084031A /* CloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D53FE681D37F41D0084031A /* CloudService.m */; };
+		0D53FE6C1D3837530084031A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D53FE6B1D3837530084031A /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		0D53FE621D36C4E90084031A /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		0D53FE641D36CBA50084031A /* Student+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
 		0D53FE651D36CBA50084031A /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
+		0D53FE671D37F41D0084031A /* CloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudService.h; sourceTree = "<group>"; };
+		0D53FE681D37F41D0084031A /* CloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudService.m; sourceTree = "<group>"; };
+		0D53FE6A1D38374F0084031A /* Classmates.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Classmates.entitlements; sourceTree = "<group>"; };
+		0D53FE6B1D3837530084031A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D53FE6C1D3837530084031A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +64,7 @@
 		0D53FE2C1D36B7170084031A = {
 			isa = PBXGroup;
 			children = (
+				0D53FE6B1D3837530084031A /* CloudKit.framework */,
 				0D53FE371D36B7170084031A /* Classmates */,
 				0D53FE361D36B7170084031A /* Products */,
 			);
@@ -73,6 +81,7 @@
 		0D53FE371D36B7170084031A /* Classmates */ = {
 			isa = PBXGroup;
 			children = (
+				0D53FE6A1D38374F0084031A /* Classmates.entitlements */,
 				0D53FE4F1D36B72D0084031A /* Global */,
 				0D53FE521D36B75D0084031A /* Model */,
 				0D53FE501D36B7360084031A /* Controller */,
@@ -148,6 +157,8 @@
 			children = (
 				0D53FE561D36BBA10084031A /* Store.h */,
 				0D53FE571D36BBA10084031A /* Store.m */,
+				0D53FE671D37F41D0084031A /* CloudService.h */,
+				0D53FE681D37F41D0084031A /* CloudService.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -183,6 +194,12 @@
 				TargetAttributes = {
 					0D53FE341D36B7170084031A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4A98EB9QY9;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -224,6 +241,7 @@
 			files = (
 				0D53FE401D36B7170084031A /* ViewController.m in Sources */,
 				0D53FE5E1D36C0E50084031A /* NSString+Extension.m in Sources */,
+				0D53FE691D37F41D0084031A /* CloudService.m in Sources */,
 				0D53FE3D1D36B7170084031A /* AppDelegate.m in Sources */,
 				0D53FE631D36C4E90084031A /* AddViewController.m in Sources */,
 				0D53FE3A1D36B7170084031A /* main.m in Sources */,
@@ -341,10 +359,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Classmates/Classmates.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Classmates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Erin-Roby.Classmates";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,10 +373,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Classmates/Classmates.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Classmates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Erin-Roby.Classmates";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -378,6 +402,7 @@
 				0D53FE4E1D36B7170084031A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
