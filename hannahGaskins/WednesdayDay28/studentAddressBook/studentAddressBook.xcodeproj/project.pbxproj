@@ -18,6 +18,8 @@
 		EE113A7A1D36EED600EB36C3 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A791D36EED600EB36C3 /* AddViewController.m */; };
 		EE113A7E1D36FF2B00EB36C3 /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A7D1D36FF2B00EB36C3 /* Student+Extension.m */; };
 		EE113A821D36FF5900EB36C3 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A811D36FF5900EB36C3 /* NSString+Extension.m */; };
+		EE113A881D3859A300EB36C3 /* CloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = EE113A871D3859A300EB36C3 /* CloudService.m */; };
+		EE113A8B1D385F2B00EB36C3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE113A8A1D385F2B00EB36C3 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		EE113A7D1D36FF2B00EB36C3 /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
 		EE113A801D36FF5900EB36C3 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		EE113A811D36FF5900EB36C3 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		EE113A861D38599E00EB36C3 /* CloudService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudService.h; sourceTree = "<group>"; };
+		EE113A871D3859A300EB36C3 /* CloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudService.m; sourceTree = "<group>"; };
+		EE113A891D385EF400EB36C3 /* studentAddressBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = studentAddressBook.entitlements; sourceTree = "<group>"; };
+		EE113A8A1D385F2B00EB36C3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE113A8B1D385F2B00EB36C3 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +64,7 @@
 		EE113A4B1D36B76F00EB36C3 = {
 			isa = PBXGroup;
 			children = (
+				EE113A8A1D385F2B00EB36C3 /* CloudKit.framework */,
 				EE113A561D36B76F00EB36C3 /* studentAddressBook */,
 				EE113A551D36B76F00EB36C3 /* Products */,
 			);
@@ -73,6 +81,7 @@
 		EE113A561D36B76F00EB36C3 /* studentAddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				EE113A891D385EF400EB36C3 /* studentAddressBook.entitlements */,
 				EE113A761D36EBA900EB36C3 /* App Global */,
 				EE113A7F1D36FF3200EB36C3 /* Extensions */,
 				EE113A711D36B7AB00EB36C3 /* Model */,
@@ -105,6 +114,8 @@
 		EE113A751D36BBAF00EB36C3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				EE113A861D38599E00EB36C3 /* CloudService.h */,
+				EE113A871D3859A300EB36C3 /* CloudService.m */,
 				EE113A721D36BBA000EB36C3 /* Store.h */,
 				EE113A731D36BBA000EB36C3 /* Store.m */,
 			);
@@ -186,6 +197,12 @@
 				TargetAttributes = {
 					EE113A531D36B76F00EB36C3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6AQ4PTS4W4;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -227,6 +244,7 @@
 			files = (
 				EE113A7E1D36FF2B00EB36C3 /* Student+Extension.m in Sources */,
 				EE113A5F1D36B76F00EB36C3 /* ViewController.m in Sources */,
+				EE113A881D3859A300EB36C3 /* CloudService.m in Sources */,
 				EE113A5C1D36B76F00EB36C3 /* AppDelegate.m in Sources */,
 				EE113A7A1D36EED600EB36C3 /* AddViewController.m in Sources */,
 				EE113A591D36B76F00EB36C3 /* main.m in Sources */,
@@ -344,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = studentAddressBook/studentAddressBook.entitlements;
 				INFOPLIST_FILE = studentAddressBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hannahgaskins.studentAddressBook;
@@ -355,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = studentAddressBook/studentAddressBook.entitlements;
 				INFOPLIST_FILE = studentAddressBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hannahgaskins.studentAddressBook;
@@ -381,6 +401,7 @@
 				EE113A6D1D36B76F00EB36C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

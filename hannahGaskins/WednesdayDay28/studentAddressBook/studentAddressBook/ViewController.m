@@ -10,35 +10,47 @@
 #import "Store.h"
 #import "Student.h"
 #import "AddViewController.h"
+#import "CloudService.h"
 
+@interface ViewController () <UITableViewDataSource>
 
-@interface ViewController ()
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableVIew;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
-
-#pragma mark - PrepareForSeque
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString: [AddViewController identifier]]) {
         AddViewController *addViewController = (AddViewController *)segue.destinationViewController;
         addViewController.completion = ^ {
-            [self.tableView reloadData];
+            [self.tableVIew reloadData];
         };
     }
+}
 
+- (void)updateStudents
+{
+    __weak typeof(self) weakSelf = self;
+    
+    [[CloudService shared]enqueueOperation:^(BOOL success, NSArray<Student *> *students) {
+        [[Store shared]addStudentsFromCloudKit:students];
+        [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+            [weakSelf.tableVIew reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationRight];
+        }];
+    }];
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -59,7 +71,6 @@
     return studentCell;
 }
 
-
 #pragma mark - UITableViewDelegate
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,8 +81,9 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [[Store shared]removeStudentAtIndexPath:indexPath];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        [[Store shared]removeStudentAtIndexPath:indexPath completion:^{
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        }];
     }
 }
 
