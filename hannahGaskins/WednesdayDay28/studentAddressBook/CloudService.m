@@ -1,0 +1,163 @@
+//
+//  CloudService.m
+//  ClassMates
+//
+//  Created by hannah gaskins on 7/14/16.
+//  Copyright © 2016 Michael Babiy. All rights reserved.
+//
+
+#import "CloudService.h"
+#import "Student+Extension.h"
+
+static NSString *const StudentRecordType = @"Student";
+
+@interface CloudService ()
+
+@property (strong, nonatomic) CKContainer *container;
+@property (strong, nonatomic) CKDatabase *database;
+
+@end
+
+@implementation CloudService
+
++ (instancetype)shared
+{
+    static CloudService *shared;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[[self class]alloc]init];
+    });
+    return shared;
+}
+
+- (instancetype)init
+{
+    // need to initialize the CKContainer and CKDatabase as they are nil;
+    self = [super init];
+    
+    if (self) {
+        _container = [CKContainer defaultContainer];
+        _database = [_container privateCloudDatabase];
+    }
+    return self;
+}
+
+- (void)enqueueOperation:(CloudServiceCompletion)completion
+{
+    [self retrieve:completion];
+}
+
+- (void)enqueueOperation:(CloudOperation)operation student:(Student *)student completion:(CloudServiceCompletion)completion
+{
+    if (operation == CloudOperationSave) {
+        [self save:student completion:completion];
+    }
+    
+    if (operation == CloudOperationRetreive) {
+        [self retrieve:completion];
+    }
+    
+    if (operation == CloudOperationDelete) {
+        [self delete:student completion:completion];
+    }
+}
+
+#pragma mark - Helper Methods
+
+- (void)retrieve:(CloudServiceCompletion)completion
+{
+    // retrieve all students from CloudKit - specify the predicate
+    // create predicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"TRUEPREDICATE"];
+    // creating query
+    CKQuery *query = [[CKQuery alloc]initWithRecordType:StudentRecordType predicate:predicate];
+    
+    [self.database performQuery:query inZoneWithID:nil completionHandler:^(NSArray<CKRecord *> * _Nullable results, NSError * _Nullable error) {
+     
+        [Student studentsFromRecords:results completion:^(NSArray<Student *> *students) {
+        completion(YES, students);
+            
+        }];
+     
+    }];
+}
+
+- (void)save:(Student *)student completion:(CloudServiceCompletion)completion
+{
+    //
+    CKRecord *record = [[CKRecord alloc]initWithRecordType:StudentRecordType];
+    record[@"firstName"] = student.firstName;
+    record[@"lastName"] = student.lastName;
+    record[@"email"] = student.email;
+    record[@"phone"] = student.phone;
+    
+    //call save record on the database
+    [self.database saveRecord:record completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error saving to CloudKit. Error: %@", [error localizedDescription]);
+        }
+        if (!error && record) {
+            // pointer to main queue
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(YES, @[student]);
+            });
+        }
+    }];
+
+}
+
+- (void)delete:(Student *)student completion:(CloudServiceCompletion)completion
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"email == %@", student.email];
+    CKQuery *query = [[CKQuery alloc]initWithRecordType:StudentRecordType predicate:predicate];
+    
+    [self.database performQuery:query inZoneWithID:nil completionHandler:^(NSArray<CKRecord *> * _Nullable results, NSError * _Nullable error) {
+        // if this successeds we get a record. Two calls to CK - getting the record, the other for the deletion
+        
+        if (results && !error) {
+            
+            for (CKRecord *record in results) {
+                [self.database deleteRecordWithID:record.recordID completionHandler:^(CKRecordID * _Nullable recordID, NSError * _Nullable error) {
+                    
+                    if (error) {
+                        NSLog(@"error deleting student record, Error %@", [error localizedDescription]);
+                    }
+                    else {
+                        // return student back in completion
+                        
+                        [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+                            completion(YES, @[student]);
+                        }];
+                    }
+                }];
+            }
+        }
+    }];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@end
