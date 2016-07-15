@@ -24,7 +24,7 @@ typedef void(^StoreCompletion)();
 
 - (void)add:(Student *)student completion:(StoreCompletion)completion;;
 - (void)remove:(Student *)student completion:(StoreCompletion)completion;;
-- (void)removeStudentAtIndexPath:(NSIndexPath *)indexPath completion:(StoreCompletion)completion;;
+- (void)removeStudentAtIndexPath:(NSIndexPath *)indexPath completion:(StoreCompletion)completion;
 - (void)save;
 
 @end
