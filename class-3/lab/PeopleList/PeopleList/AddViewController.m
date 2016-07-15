@@ -49,15 +49,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)showAlertView
+{
+    NSString *title = @"Error";
+    NSString *message = @"complet the form";
+    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:nil   ];
+    
+    [controller addAction:okAction];
+    [self presentViewController:controller animated:YES completion:nil];
+    
 }
-*/
 
 - (IBAction)saveButtonSelected:(id)sender {
     self.student.firstName = self.firstNameUserField.text;
@@ -67,10 +71,15 @@
     
     if (self.student.isValid && self.completion)
     {
-        [[Store shared]add: self.student];
-        [self completion]();
+        [[Store shared]add:self.student completion:^{
+            
+            [self completion]();
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
         
-        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [self showAlertView];
+        
     }
     
 }

@@ -18,6 +18,8 @@
 		69E806741D36C14200399DD7 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E806731D36C14200399DD7 /* NSString+Extension.m */; };
 		69E806771D36C4EF00399DD7 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E806761D36C4EF00399DD7 /* AddViewController.m */; };
 		69E8067A1D36CBAE00399DD7 /* Student+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E806791D36CBAE00399DD7 /* Student+Extensions.m */; };
+		69E8067D1D37F46D00399DD7 /* CloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E8067C1D37F46D00399DD7 /* CloudService.m */; };
+		69E806A81D38461B00399DD7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E806A71D38461B00399DD7 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,16 +33,20 @@
 		69E8065A1D36B76300399DD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69E8065D1D36B76300399DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69E8065F1D36B76300399DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69E806681D36B7B700399DD7 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		69E806691D36B7B700399DD7 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		69E806681D36B7B700399DD7 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = ../Student.h; sourceTree = "<group>"; };
+		69E806691D36B7B700399DD7 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = ../Student.m; sourceTree = "<group>"; };
 		69E8066B1D36BBAA00399DD7 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		69E8066C1D36BBAA00399DD7 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
-		69E806721D36C14200399DD7 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
-		69E806731D36C14200399DD7 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		69E806721D36C14200399DD7 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extension.h"; path = "../NSString+Extension.h"; sourceTree = "<group>"; };
+		69E806731D36C14200399DD7 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extension.m"; path = "../NSString+Extension.m"; sourceTree = "<group>"; };
 		69E806751D36C4EF00399DD7 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		69E806761D36C4EF00399DD7 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
-		69E806781D36CBAE00399DD7 /* Student+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Extensions.h"; sourceTree = "<group>"; };
-		69E806791D36CBAE00399DD7 /* Student+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extensions.m"; sourceTree = "<group>"; };
+		69E806781D36CBAE00399DD7 /* Student+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Student+Extensions.h"; path = "../Student+Extensions.h"; sourceTree = "<group>"; };
+		69E806791D36CBAE00399DD7 /* Student+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Student+Extensions.m"; path = "../Student+Extensions.m"; sourceTree = "<group>"; };
+		69E8067B1D37F46D00399DD7 /* CloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudService.h; sourceTree = "<group>"; };
+		69E8067C1D37F46D00399DD7 /* CloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudService.m; sourceTree = "<group>"; };
+		69E806A61D38461400399DD7 /* PeopleList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PeopleList.entitlements; sourceTree = "<group>"; };
+		69E806A71D38461B00399DD7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E806A81D38461B00399DD7 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +64,7 @@
 		69E806421D36B76300399DD7 = {
 			isa = PBXGroup;
 			children = (
-				69E806721D36C14200399DD7 /* NSString+Extension.h */,
-				69E806781D36CBAE00399DD7 /* Student+Extensions.h */,
-				69E806791D36CBAE00399DD7 /* Student+Extensions.m */,
-				69E806731D36C14200399DD7 /* NSString+Extension.m */,
-				69E806681D36B7B700399DD7 /* Student.h */,
-				69E806691D36B7B700399DD7 /* Student.m */,
+				69E806A71D38461B00399DD7 /* CloudKit.framework */,
 				69E8066B1D36BBAA00399DD7 /* Store.h */,
 				69E8066C1D36BBAA00399DD7 /* Store.m */,
 				69E8064D1D36B76300399DD7 /* PeopleList */,
@@ -81,6 +83,7 @@
 		69E8064D1D36B76300399DD7 /* PeopleList */ = {
 			isa = PBXGroup;
 			children = (
+				69E806A61D38461400399DD7 /* PeopleList.entitlements */,
 				69E806671D36B79900399DD7 /* Model */,
 				69E806661D36B78F00399DD7 /* View */,
 				69E806651D36B77A00399DD7 /* App Global */,
@@ -88,6 +91,8 @@
 				69E806551D36B76300399DD7 /* ViewController.m */,
 				69E806751D36C4EF00399DD7 /* AddViewController.h */,
 				69E806761D36C4EF00399DD7 /* AddViewController.m */,
+				69E8067B1D37F46D00399DD7 /* CloudService.h */,
+				69E8067C1D37F46D00399DD7 /* CloudService.m */,
 				69E806571D36B76300399DD7 /* Main.storyboard */,
 				69E8065A1D36B76300399DD7 /* Assets.xcassets */,
 				69E8065C1D36B76300399DD7 /* LaunchScreen.storyboard */,
@@ -124,6 +129,12 @@
 		69E806671D36B79900399DD7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				69E806721D36C14200399DD7 /* NSString+Extension.h */,
+				69E806781D36CBAE00399DD7 /* Student+Extensions.h */,
+				69E806791D36CBAE00399DD7 /* Student+Extensions.m */,
+				69E806731D36C14200399DD7 /* NSString+Extension.m */,
+				69E806681D36B7B700399DD7 /* Student.h */,
+				69E806691D36B7B700399DD7 /* Student.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -159,6 +170,12 @@
 				TargetAttributes = {
 					69E8064A1D36B76300399DD7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8ZT3NZA445;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -200,6 +217,7 @@
 			files = (
 				69E806561D36B76300399DD7 /* ViewController.m in Sources */,
 				69E8067A1D36CBAE00399DD7 /* Student+Extensions.m in Sources */,
+				69E8067D1D37F46D00399DD7 /* CloudService.m in Sources */,
 				69E806741D36C14200399DD7 /* NSString+Extension.m in Sources */,
 				69E806531D36B76300399DD7 /* AppDelegate.m in Sources */,
 				69E806771D36C4EF00399DD7 /* AddViewController.m in Sources */,
@@ -319,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PeopleList/PeopleList.entitlements;
 				INFOPLIST_FILE = PeopleList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derekgraham.PeopleList;
@@ -330,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PeopleList/PeopleList.entitlements;
 				INFOPLIST_FILE = PeopleList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derekgraham.PeopleList;
@@ -356,6 +376,7 @@
 				69E806641D36B76300399DD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

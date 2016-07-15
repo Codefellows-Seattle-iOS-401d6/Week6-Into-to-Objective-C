@@ -11,6 +11,35 @@
 
 @implementation Student (Extensions)
 
++ (void)studentsFromRecords: (NSArray<CKRecord *> *)records completion:(StudentCompletion)completion;
+{
+    if (!records || records.count == 0){
+        completion(nil);
+    } else {
+        [[[NSOperationQueue alloc]init]addOperationWithBlock:^{
+            
+            
+            NSMutableArray *students = [[NSMutableArray alloc]init];
+            
+            for (CKRecord *record in records) {
+                NSString *firstName = record[@"firstName"];
+                NSString *lastName = record[@"lastName"];
+                NSString *email = record[@"email"];
+                NSString *phone = record[@"phone"];
+                
+                [students addObject: [[Student alloc]initWithFirstName:firstName lastName:lastName email:email phone:phone]];
+                
+            }
+            
+            [[NSOperationQueue mainQueue]addOperationWithBlock:^{
+                completion(students);
+            }];
+        }];
+
+    }
+    
+    
+}
 
 - (BOOL)isValid
 {
@@ -19,8 +48,8 @@
         return YES;
     } else
     {
-         return NO;
-    }
+        return NO;
+       }
     
    
 }

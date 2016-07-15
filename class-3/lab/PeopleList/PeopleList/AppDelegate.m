@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Store.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -40,6 +41,10 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
+    ViewController *viewController = (ViewController *)navController.topViewController;
+    [viewController updateStudents];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
