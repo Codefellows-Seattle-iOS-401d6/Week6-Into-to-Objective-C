@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "83450B1B20722BB69E54EEA5EFD26C59BDE10BC3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EB79EE5254103E98E9FA292F452FAD5F00FD61B2" : 0,
+    "83450B1B20722BB69E54EEA5EFD26C59BDE10BC3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "02F4F066-8F66-419F-8D41-FE5BDB889BF1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EB79EE5254103E98E9FA292F452FAD5F00FD61B2" : "",
+    "83450B1B20722BB69E54EEA5EFD26C59BDE10BC3" : "Week6-Into-to-Objective-C\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Classmates",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "class-3\/Classmates\/Classmates.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/erinroby\/Week6-Into-to-Objective-C.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "83450B1B20722BB69E54EEA5EFD26C59BDE10BC3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/erinroby\/iOS-401-class-5.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB79EE5254103E98E9FA292F452FAD5F00FD61B2"
+    }
+  ]
+}
